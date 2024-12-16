@@ -4,10 +4,10 @@ import mysql.connector
 
 # Koneksi ke MySQL di PythonAnywhere
 conn = mysql.connector.connect(
-    host='TselSikka.mysql.pythonanywhere-services.com',
-    user='TselSikka',
-    password='BranchSikka97',
-    database='TselSikka$Token_Flotim'
+    host='',
+    user='',
+    password='',
+    database=''
 )
 
 cursor = conn.cursor()
@@ -17,10 +17,10 @@ def update_token_by_nomor(nomor_token, status):
     try:
         # Koneksi ke database
         connection = mysql.connector.connect(
-            host='TselSikka.mysql.pythonanywhere-services.com',
-            user='TselSikka',
-            password='BranchSikka97',
-            database='TselSikka$Token_Flotim'
+            host='',
+            user='',
+            password='',
+            database=''
         )
         cursor = connection.cursor(buffered=True)  # Gunakan cursor buffered untuk menghindari hasil yang menggantung
 
@@ -71,10 +71,10 @@ import mysql.connector
 def insert_tokens_to_db(data):
     try:
         connection = mysql.connector.connect(
-            host='TselSikka.mysql.pythonanywhere-services.com',
-            user='TselSikka',
-            password='BranchSikka97',
-            database='TselSikka$Token_Flotim'
+            host='',
+            user='',
+            password='',
+            database=''
         )
         cursor = connection.cursor()
 
@@ -112,10 +112,10 @@ async def delete_tokens(site_id=None):
     try:
         # Koneksi ke database secara asynchronous
         connection = await aiomysql.connect(
-            host='TselSikka.mysql.pythonanywhere-services.com',
-            user='TselSikka',
-            password='BranchSikka97',
-            db='TselSikka$Token_Flotim'
+            host='',
+            user='',
+            password='',
+            db=''
         )
 
         async with connection.cursor() as cursor:
@@ -142,10 +142,10 @@ async def delete_tokens_by_month(token_bulan=None):
     try:
         # Koneksi ke database dengan aiomysql (asynchronous MySQL driver)
         connection = await aiomysql.connect(
-            host='TselSikka.mysql.pythonanywhere-services.com',
-            user='TselSikka',
-            password='BranchSikka97',
-            db='TselSikka$Token_Flotim'
+            host='',
+            user='',
+            password='',
+            db=''
         )
         async with connection.cursor() as cursor:
             # Query untuk menghapus data berdasarkan token_bulan
